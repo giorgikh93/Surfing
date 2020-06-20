@@ -1,0 +1,302 @@
+@font-face {
+  font-family: "leaguespartanBold";
+  src: url("./fonts/leaguespartan-bold.ttf");
+}
+@font-face {
+  font-family: "popinsLight";
+  src: url("./fonts/Poppins-Light.ttf");
+}
+@font-face {
+  font-family: "PlayfairDisplay";
+  src: url("./fonts/PlayfairDisplay-Bold.ttf");
+}
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+  font-size: 100%;
+  text-decoration: none;
+  font: inherit;
+  color: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+  line-height: 1;
+  box-sizing: border-box;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+.wrapper{
+  max-width: 1226px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+
+/* header */
+
+.line{
+   height:100%;
+   width: 1px;
+  opacity: 0.1;
+  background-color: rgb(180, 178, 178);
+}
+.linesWrapper{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+}
+.header{
+  display: flex;
+  align-items: center;
+  width: 50%;
+  justify-content: space-between;
+  padding: 40px 0;
+}
+.menu{
+  display: flex;
+  justify-content: space-between;
+  width: 66%;
+  font-size: 8pt;
+}
+.menu li{
+  font-family: 'leaguespartanBold';
+}
+.logo{
+  padding-left: 1px;
+}
+/* surfingSlider */
+
+
+.surfingSliderWrapper{
+  width: 100%;
+position: relative;
+height: 573px;
+}
+.surfingTextWrapper{
+  position: absolute;
+  top: 36%;
+  z-index: 1;
+}
+.surfingTextWrapper span{
+  font-size: 9pt;
+  color: #5da8ef;
+  font-family: 'leaguespartanBold';
+}
+.surfingTextWrapper h1{
+  font-size: 46pt;
+  padding: 20px 0;
+  font-family: 'PlayfairDisplay';
+}
+.surfingTextWrapper p{
+  font-size: 12pt;
+  line-height: 1.7;
+  color:#8f8f8f;
+  font-family: 'popinsLight';
+}
+.sliderImage{
+  display: flex;
+  position: absolute;
+  right: 0;
+  transform: translate(0);
+  width: 1018px;
+  height: 570px;
+}
+.sliderImage img{
+  width: 100%;
+  height: 100%;
+  box-shadow:  0 5px 5px 0 rgba(0, 0, 0, 0.2), 0 10px 10px 0 rgba(0, 0, 0, 0.19);
+}
+.arrows{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  bottom: 0;
+}
+.arrows i{
+  font-size: 25px;
+  cursor: pointer;
+  opacity: 0.5
+}
+.arrows div{
+  padding: 0 15px;
+  font-size: 10pt;
+  font-family: 'leaguespartanBold';
+}
+.divider{
+  color: #8f8f8f;
+  opacity: 0.5;
+  padding: 0 6px;
+}
+.current{
+  color: #5da8ef;
+}
+
+.active{
+  color: #5da8ef;
+}
+
+.rightColumn{
+  position: absolute;
+  right: -200px;
+  font-family: 'leaguespartanBold';
+  top: 35px;
+  transform: rotate(-90deg);
+  font-size: 9pt;
+}
+.rightColumn span{
+  padding: 0 7px;
+  opacity: .2;
+}
+
+.socialIcons{
+  display: flex;
+  flex-direction: column;
+  width: 20px;
+  position: absolute;
+  bottom: 0;
+  right: -80px;
+
+}
+  
+.socialIcons img{
+  padding: 10px 0;
+}
+/* slider */
+
+/* SurfingVideo Section */
+
+
+.surfingVideo{
+  padding-top: 200px;
+  text-align: center;
+  font-family: 'PlayfairDisplay';
+  opacity: 0.9;
+  font-size: 16pt;
+  width: 524px;
+  line-height: 1.4;
+  margin: 0 auto;
+}
+
+.surfingVideo p{
+  color: #333333;
+
+}
+
+.surfingVideo span{
+  color: #333333;
+  font-size: 9pt;
+  font-family: 'leaguespartanBold';
+
+}
+
+hr{
+  transform: rotate(-90deg);
+  width: 110px;
+  height: 3px;
+  background: #5da8ef;
+  border: none;
+  margin: 100px auto;
+}
+
+.imgTextSection{
+  width: 50%;
+  display: flex;
+ align-items: center;
+  flex-direction: column;
+}
+.imgTextSection p{
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 40px;
+  line-height: 1.6;
+  font-family: 'popinsLight';
+  font-size: 14px;
+  opacity: 0.65;
+}
+
+.read-more{
+  width: 50%;
+  padding-top: 50px;
+  font-size: 9pt;
+  font-family: 'leaguespartanBold';
+  cursor: pointer;
+}
+.underLine{
+  width: 75px;
+  height: 2px;
+  background-color: #5da8ef;
+  color: #5da8ef;
+  margin: 2px 0;
+}
+.videoSectionWrapper{
+  display: flex;
+}
+.video{
+  width: 705px;
+  height: 546px;
+  transform: translate(-90px);
+  position: relative;
+}
+
+
+.video button{
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  padding:25px;
+  position: absolute;
+  top: 50%;
+  font-size: 15px;
+  cursor: pointer;
+  color: white;
+  background-color: #5da8ef;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: none;
+}
+.video:hover button{
+  display: block;
+}
+
