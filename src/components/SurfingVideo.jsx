@@ -28,9 +28,10 @@ function SurfingVideo() {
             <div className='videoSectionWrapper'>
                 <div className='imgTextSection'>
                     <img src="http://localhost:3000/images/surf.png" alt="" />
-
-                    <p>By better understanding the various aspects of surfing. you will improve faster and have more fun in the water</p>
-                    <ReadMore />
+                    <div className='paragraphWrapper'>
+                    <p>By better understanding the various aspects of surfing. you will improve faster and have more fun in the water  </p>
+                    <ReadMore text={'READ MORE'}/>   
+                    </div>
                 </div>
                 <div className='video'>
                     <video ref={myVideo} width='705px' height='546px' >

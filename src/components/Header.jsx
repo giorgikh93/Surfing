@@ -8,10 +8,10 @@ function Header() {
                 <img src="http://localhost:3000/images/logo.png" alt="logo" />
             </div>
             <ul className='menu'>
-                <a href="/stories"><li>S T O  R I E S</li></a>
-                <a href="/events"><li>E V E N T S</li></a>
-                <a href="places"><li>P L A C E S</li></a>
-                <a href="boards"><li>B O A R D S</li></a>
+                <a href="/stories"><li>STORIES</li></a>
+                <a href="/events"><li>EVENTS</li></a>
+                <a href="places"><li>PLACES</li></a>
+                <a href="boards"><li>BOARDS</li></a>
             </ul>
         </div>
     )

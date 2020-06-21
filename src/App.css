@@ -11,6 +11,10 @@
   src: url("./fonts/PlayfairDisplay-Bold.ttf");
 }
 
+@font-face {
+  font-family: "myriadPro";
+  src: url("./fonts/myriad-pro-regular.ttf");
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -102,6 +106,7 @@ table {
 }
 .menu li{
   font-family: 'leaguespartanBold';
+  letter-spacing: 5px;
 }
 .logo{
   padding-left: 1px;
@@ -120,7 +125,8 @@ height: 573px;
   z-index: 1;
 }
 .surfingTextWrapper span{
-  font-size: 9pt;
+  letter-spacing: 1px;
+  font-size: 8pt;
   color: #5da8ef;
   font-family: 'leaguespartanBold';
 }
@@ -179,15 +185,16 @@ height: 573px;
 
 .rightColumn{
   position: absolute;
-  right: -200px;
+  right: -230px;
   font-family: 'leaguespartanBold';
-  top: 35px;
+  top: 55px;
   transform: rotate(-90deg);
-  font-size: 9pt;
+  font-size: 8pt;
 }
 .rightColumn span{
   padding: 0 7px;
   opacity: .2;
+  letter-spacing: 7px;
 }
 
 .socialIcons{
@@ -211,24 +218,24 @@ height: 573px;
 .surfingVideo{
   padding-top: 200px;
   text-align: center;
-  font-family: 'PlayfairDisplay';
+  font-family: 'MyriadPro';
   opacity: 0.9;
-  font-size: 16pt;
-  width: 524px;
-  line-height: 1.4;
+  font-size: 26pt;
+  max-width: 743px;
+  width: 100%;
+  line-height: 1.6;
   margin: 0 auto;
 }
 
 .surfingVideo p{
   color: #333333;
-
 }
 
 .surfingVideo span{
   color: #333333;
-  font-size: 9pt;
+  font-size: 8pt;
+  letter-spacing: 7px;
   font-family: 'leaguespartanBold';
-
 }
 
 hr{
@@ -237,7 +244,7 @@ hr{
   height: 3px;
   background: #5da8ef;
   border: none;
-  margin: 100px auto;
+  margin: 80px auto 120px auto;
 }
 
 .imgTextSection{
@@ -246,8 +253,10 @@ hr{
  align-items: center;
   flex-direction: column;
 }
-.imgTextSection p{
+.paragraphWrapper{
   width: 50%;
+}
+.imgTextSection p{
   margin: 0 auto;
   padding-top: 40px;
   line-height: 1.6;
@@ -257,21 +266,24 @@ hr{
 }
 
 .read-more{
-  width: 50%;
   padding-top: 50px;
-  font-size: 9pt;
+  font-size: 7pt;
   font-family: 'leaguespartanBold';
   cursor: pointer;
+  letter-spacing: 5px;
+  width: 103px;
 }
 .underLine{
-  width: 75px;
+  width: 95%;
   height: 2px;
   background-color: #5da8ef;
   color: #5da8ef;
-  margin: 2px 0;
+  margin: 6px 5px 0 0;
+
 }
 .videoSectionWrapper{
   display: flex;
+  position:relative
 }
 .video{
   width: 705px;
@@ -300,3 +312,201 @@ hr{
   display: block;
 }
 
+/* Shop */
+
+
+.background{
+  position: absolute;
+  z-index: -2;
+top: -216px;
+  min-width: 1900px;
+  width: 100%;
+}
+.shopHeading{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 200px;
+  position: relative;
+}
+.shopHeading span{
+  font-family: 'leaguespartanBold';
+  color: #5da8ef;
+  font-size: 8pt;
+  letter-spacing: 8px;
+}
+.shopHeading h1{
+  font-family: 'PlayfairDisplay';
+  font-size: 42pt;
+  color: #333333;
+  padding-top: 3px;
+}
+.itemsWrapper{
+  padding-top: 176px;
+  display: flex;
+  justify-content:space-between;
+}
+
+
+.surfBackground{
+  width: 249px;
+  height: 323px;
+  background-color: #e7e7e7;
+  position: relative;
+}
+
+.itemsWrapper img{
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translate(-50%);
+}
+.surfImg{
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translate(-50%);
+  height: 450px;
+}
+.infoWrapper{
+  position: absolute;
+  right: -152px;
+  top: 70px;
+  display: flex;
+  flex-direction: column;
+  
+}
+.infoWrapper p{
+  font-family: 'myriadPro';
+  color: #7a7a7a;
+  letter-spacing: 3px;
+}
+.infoWrapper h1{
+  font-family: 'PlayfairDisplay';
+  color: #504f4f;
+  padding-top: 5px;
+  font-size: 20pt;
+  z-index: 12;
+}
+.price{
+  font-family: 'popinsLight';
+  color: #ce60a8;
+  font-size: 20pt;
+}
+.buy{
+  font-family: 'leaguespartanBold';
+  font-size: 7pt;
+  color: #504f4f;
+  padding-top: 7px;
+  letter-spacing: 5px;
+  
+}
+.priceWrapper{
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+  margin: 0 60px;
+}
+.showAll{
+   max-width: 1226px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.slick-slide{
+  display: flex;
+  justify-content: space-between;
+}
+.slick-current{
+  width: 100px;
+}
+.surfboards{
+  min-width: 1399px;
+  width: 100%;
+}
+.slick-next::before{
+ border: none;
+}
+button.slick-arrow.slick-prev,button.slick-arrow.slick-next {
+  top: 60%;
+}
+
+
+button.slick-arrow.slick-prev:before{
+  content: '\2039';
+  font-size:50px;
+  color: gray;
+}
+button.slick-arrow.slick-next:before{
+  content: '\203a';
+  font-size: 50px;
+  color: gray;
+}
+div.slick-slide div{
+  outline: none;
+}
+button.slick-arrow.slick-prev{
+  left: -115px;
+}
+
+
+/* surfTraining */
+
+.surfTraining{
+  padding-top: 178px;
+  display: flex;
+  justify-content: space-between;
+}
+.numWrapper{
+  position: relative;
+  width: 100%;
+}
+.num{
+  font-size: 130pt;
+  color: #e7e7e7;
+  font-family: 'leaguespartanBold';
+  opacity: 0.2;
+}
+.article{
+  display: flex;
+  flex-direction: column;
+  padding: 0 30px;
+}
+.surfTraining img{
+  flex: 2;
+}
+.article h1{
+  position: absolute;
+  bottom: 47px;
+  font-size: 42pt;
+  font-family: 'PlayfairDisplay';
+  flex: 1;
+}
+.rectangle{
+  width: 23px;
+  background-color: #5da8ef ;
+  height: 2px;
+  margin-bottom: 20px;
+}
+.article p{
+  line-height: 1.5;
+  font-size: 14pt;
+  font-family: 'popinsLight';
+  color: #cccccc;
+}
+.img{
+  position: relative;
+}
+
+.img span{
+  position: absolute;
+  transform: rotate(-90deg);
+  top: 40px;
+  right: -65px;
+  font-family: 'leaguespartanBold';
+  font-size: 7pt;
+  color: #e7e7e7;
+  letter-spacing: 3px;
+}

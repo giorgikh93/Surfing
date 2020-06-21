@@ -53,7 +53,7 @@ function SurfingSlider() {
                 </div>
                 <div className='rightColumnWrapper'>
                     <div className='rightColumn'>
-                        <span>F I R S T</span> <span>S U R F I N G</span><span>M A G A Z I N E</span>
+                        <span>FIRST SURFING MAGAZINE</span>
                     </div>
                     <div className='socialIcons'>
                         <img src='http://localhost:3000/images/tumb.png' alt="img" />
