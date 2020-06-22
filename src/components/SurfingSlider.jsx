@@ -40,7 +40,7 @@ function SurfingSlider() {
 
     return (
         <>
-            <div className='surfingSliderWrapper'>
+            <div className='surfingSliderWrapper ' >
                 <div className='surfingTextWrapper'>
                     <span>Y O U R</span>
                     <h1>Beautiful Escape</h1>

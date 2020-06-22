@@ -146,7 +146,8 @@ height: 573px;
   position: absolute;
   right: 0;
   transform: translate(0);
-  width: 1018px;
+  max-width: 1018px;
+  width: 100%;
   height: 570px;
 }
 .sliderImage img{
@@ -272,6 +273,10 @@ hr{
   cursor: pointer;
   letter-spacing: 5px;
   width: 103px;
+  transition: .4s;
+}
+.read-more:hover{
+  color: #5da8ef;
 }
 .underLine{
   width: 95%;
@@ -313,14 +318,18 @@ hr{
 }
 
 /* Shop */
-
+.relative{
+  position: relative;
+}
 
 .background{
   position: absolute;
   z-index: -2;
-top: -216px;
-  min-width: 1900px;
+  /* top: -216px; */
+  /* left: 0;
+  right: 0; */
   width: 100%;
+  top: 30%;
 }
 .shopHeading{
   display: flex;
@@ -464,10 +473,10 @@ button.slick-arrow.slick-prev{
   width: 100%;
 }
 .num{
+
   font-size: 130pt;
-  color: #e7e7e7;
-  font-family: 'leaguespartanBold';
-  opacity: 0.2;
+    font-family: 'leaguespartanBold';
+    color: #f9f9f9;
 }
 .article{
   display: flex;
@@ -479,7 +488,7 @@ button.slick-arrow.slick-prev{
 }
 .article h1{
   position: absolute;
-  bottom: 47px;
+  bottom: 60px;
   font-size: 42pt;
   font-family: 'PlayfairDisplay';
   flex: 1;
@@ -490,16 +499,17 @@ button.slick-arrow.slick-prev{
   height: 2px;
   margin-bottom: 20px;
 }
-.article p{
-  line-height: 1.5;
-  font-size: 14pt;
+.paragrapH{
+   line-height: 1.5;
+  font-size: 13pt;
   font-family: 'popinsLight';
   color: #cccccc;
 }
+
 .img{
   position: relative;
-}
 
+}
 .img span{
   position: absolute;
   transform: rotate(-90deg);
@@ -509,4 +519,312 @@ button.slick-arrow.slick-prev{
   font-size: 7pt;
   color: #e7e7e7;
   letter-spacing: 3px;
+}
+
+  /* //////////////PointBreak ////////////*/
+
+  .pointBreakWrapper{
+    padding-top: 120px;
+    position: relative;
+ 
+  }
+  .imgArticleWrapper{
+    display: flex;
+    justify-content: center;
+    flex: 2;
+    padding-left: 100px;
+  }
+  
+ .articleimg{
+   display: flex;
+ }
+
+  .articleimg span{
+    display: flex;
+    align-items: flex-end;
+    height: 98px;
+    transform: rotate(-90deg);
+    letter-spacing: 3px;
+    font-size: 8pt;
+    font-family: 'leaguespartanBold';
+    opacity: .2;
+    margin-right: 12px;
+  }
+ 
+  .headingWrapper{
+    position: relative;
+  }
+  .heading h1{
+    position: absolute;
+    top: 83px;
+  font-size: 42pt;
+  font-family: 'PlayfairDisplay';
+  }
+  .heading{
+    display: flex;
+    flex-direction: column;
+  }
+ 
+  .article2  { 
+    padding: 20px 20px 0 70px;
+    flex: 1;
+  }
+
+
+  .background2{
+    position: absolute;
+    z-index: -2;
+    /* top: 323px; */
+    bottom: 5%;
+    width: 100%;
+    width: 100%;
+  }
+
+  /* JoinClub ///////////*/
+
+  .joinClub hr{
+    margin: 160px auto 130px auto;
+  }
+  .joinClub h1{
+    font-size: 42pt;
+    font-family: 'PlayfairDisplay';
+    color: #333333;
+  }
+  .subscribeWrapper{
+    width: 580px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .subscribeWrapper p{
+    margin: 30px auto 40px auto;
+  }
+  .email{
+    display: flex;
+  }
+  .email input{
+    width: 92%;
+    outline: none;
+    padding: 15px;
+    border: 2px solid rgba(243, 243, 243, 0.486);
+    background-color: #f5f5f5;
+  }
+  .email input::placeholder{
+    font-size: 7pt;
+    font-family: 'leaguespartanBold';
+    cursor: pointer;
+    font-weight: bold;
+    padding: 15px;
+    letter-spacing: 5px;
+  }
+  .email button{
+    width: 8%;
+    border: none;
+    background-color:#5da8ef ;
+    cursor: pointer;
+    outline: none;
+  }
+  .email i {
+    font-size: 25px;
+    color: white;
+  }
+
+
+  /* contact */
+  .contact{
+    padding-top: 144px;
+    padding-bottom: 90px;
+    width: 100%;
+    display: flex;
+  }
+  
+.contactImg{
+  max-width: 721px;
+  width: 100%;
+  height: 476px;
+  position: relative;
+}
+.contactImg img{
+  width: 100%;
+  position: absolute;
+  left: -107px;
+}
+  .contactInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .ourCamp{
+    letter-spacing: 3px;
+    font-size: 8pt;
+    font-family: 'leaguespartanBold';
+    opacity: .2;
+  }
+  .location{
+    display: flex;
+    flex-direction: column;
+    font-size: 30pt;
+    font-family: 'PlayfairDisplay';
+    color: #333333;
+    padding: 35px 0 0 40px;
+  
+  }
+  .location span{
+    padding-top: 10px;
+  }
+  .contactReadMore div{
+    width: 129px;
+  }
+
+
+  /* footer */
+
+
+  .footer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 60px;
+  }
+  .footer ul{
+    padding: 40px 0;
+    width: 450px;
+  }
+  .socialIcons2 :nth-child(2){
+    padding: 0 30px
+  }
+
+
+  /* Responsive */
+  @media only screen and (max-width: 1645px){
+.surfboards{
+  min-width: 1379px;
+}  
+  }
+  @media only screen and (max-width: 1336px){
+    .wrapper{
+      max-width: 1200px;
+      width: 100%;
+    }
+    .rightColumn{
+      right:-195px
+    }
+    .socialIcons{
+      right: -46px;
+    }
+    button.slick-arrow.slick-prev {
+      left: -30px;
+  }
+  .surfBackground {
+    width: 230px;
+    height: 300px;
+  }
+  .infoWrapper{
+    right: -140px;
+  }
+.surfboards{
+  min-width: 1179px;
+}
+.infoWrapper h1,.price{
+  font-size: 18pt;
+}
+.infoWrapper p{
+  font-size: 10pt;
+}
+.num{
+  font-size: 117pt;
+}
+.article h1{
+  font-size: 35pt;
+}
+.heading h1{
+  font-size: 35pt;
+  top: 76px;
+}
+.background2{
+  bottom: 8%;
+}
+.background{
+  top: 32%;
+}
+@media only screen and (max-width: 1025px){
+  .wrapper{
+    max-width: 850px;
+  }
+  .rightColumn{
+    right:-185px
+  }
+  .socialIcons{
+    right: -36px;
+  }
+  .header{
+    width: 100%;
+  }
+  .surfingTextWrapper{
+    top: 10px;
+    left: 10px;
+  }
+  .surfingTextWrapper p{
+    color: black;
+  }
+  .imgTextSection{
+    width: 100%;
+  }
+  .videoSectionWrapper{
+    flex-direction: column;
+  }
+  .video{
+    transform: translate(0);
+    width: 100%;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  .surfboards{
+    min-width: 0;
+  }
+  .article h1{
+    font-size: 18pt;
+    bottom: 54px;
+    left:10px
+  }
+  .heading h1{
+    top: 73px;
+    left: 4px;
+    font-size: 30pt;
+  }
+  .article{
+    flex: 1;
+  }
+  .num{
+    font-size: 110pt;
+  }
+  .surfTraining img{
+    width: 100%;
+  }
+  .paragrapH{
+    font-size: 10pt;
+  }
+  .imgArticleWrapper{
+    padding-left: 0;
+  }
+  .articleimg span {
+    position: absolute;
+    left: -111px;
+  }
+  .location{
+    font-size: 20pt;
+    padding: 34px 0 ;
+  }
+  .background{
+    top: 42%;
+  }
+  .background2{
+    bottom: 11%;
+  }
+  .contactReadMore :nth-child(1){
+    padding-top: 26px;
+  }
+}
+
 }

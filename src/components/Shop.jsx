@@ -3,25 +3,33 @@ import ReadMore from './ReadMore'
 import Slider from "react-slick";
 
 function Shop() {
+
     const settings = {
         dots: false,
         infinite: true,
         speed: 500,
         slidesToShow: 3,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+
+        responsive: [{
+            breakpoint: 1025,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              initialSlide: 2
+            }
+          }]
+        
     }
     return (
         <>
-
-
             <div className='shopHeading'>
-                <img className='background' src="http://localhost:3000/images/background.png" alt="bckg" />
+                {/* <img className='background' src="http://localhost:3000/images/background.png" alt="bckg" /> */}
                 <span>SHOP</span>
                 <h1>Surfboards</h1>
             </div>
 
             <div className='surfboards'>
-                {/* <div className='itemsWrapper' > */}
                 <Slider {...settings}>
                     <div className='itemsWrapper'>
                         <div className='surfBackground'>
@@ -102,7 +110,6 @@ function Shop() {
                         </div>
                     </div>
                 </Slider>
-                {/* </div> */}
 
                 <div className='showAll'>
                     <ReadMore text={'SHOW ALL'} style={{ display: 'flex', alignItems: 'center', flexDirection: 'column' }} />

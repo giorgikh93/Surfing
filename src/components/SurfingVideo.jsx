@@ -20,7 +20,7 @@ function SurfingVideo() {
 
     return (
         <div >
-            <div className='surfingVideo'>
+            <div className='surfingVideo '>
                 <p>Surfing is the most blissful experience you can have on this planet, a taste of heaven </p>
                 <span>JOHN MCCARTHY</span>
                 <hr />

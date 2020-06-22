@@ -10,7 +10,7 @@ function SurfTraining() {
                     <h1>Surf Training</h1>
                     <div className='rectangle'></div>
                 </div>
-                <p>By better understanding the various aspects of surfing.By better understanding the various aspects of surfing, you will improve faster and have more fun in the water</p>
+                <p className='paragrapH'>By better understanding the various aspects of surfing.By better understanding the various aspects of surfing, you will improve faster and have more fun in the water</p>
             <ReadMore text={'READ MORE'} />
             </div>
             <div className="img">
