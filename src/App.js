@@ -36,7 +36,7 @@ function App() {
         <Footer />
       </div>
       <img className='background' src="http://localhost:3000/images/background.png" alt="bckg" />
-      <img className='background2' src="http://localhost:3000/images/background2.png" alt="bc" />
+      <img className='background2' src="http://localhost:3000/images/background2.png" alt="bckg2" />
 
     </div>
 

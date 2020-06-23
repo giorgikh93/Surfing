@@ -10,16 +10,24 @@ function Shop() {
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
-
         responsive: [{
-            breakpoint: 1025,
+            breakpoint: 611,
             settings: {
-              slidesToShow: 2,
-              slidesToScroll: 2,
-              initialSlide: 2
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                initialSlide: 1,
             }
-          }]
-        
+        },
+        {
+            breakpoint: 1334,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                initialSlide: 2,
+            }
+        }
+        ]
+
     }
     return (
         <>
@@ -33,7 +41,7 @@ function Shop() {
                 <Slider {...settings}>
                     <div className='itemsWrapper'>
                         <div className='surfBackground'>
-                            <img className='surfImg'  src="http://localhost:3000/images/3.png" alt="surf" />
+                            <img className='surfImg' src="http://localhost:3000/images/3.png" alt="surf" />
                             <div className="infoWrapper">
                                 <p>FUNBOARDS</p>
                                 <h1 >Chilli Rare Bird</h1>

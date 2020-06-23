@@ -255,7 +255,7 @@ hr{
   flex-direction: column;
 }
 .paragraphWrapper{
-  width: 50%;
+  width: 54%;
 }
 .imgTextSection p{
   margin: 0 auto;
@@ -574,8 +574,7 @@ button.slick-arrow.slick-prev{
   .background2{
     position: absolute;
     z-index: -2;
-    /* top: 323px; */
-    bottom: 5%;
+    bottom: 1%;
     width: 100%;
     width: 100%;
   }
@@ -698,10 +697,14 @@ button.slick-arrow.slick-prev{
   /* Responsive */
   @media only screen and (max-width: 1645px){
 .surfboards{
-  min-width: 1379px;
+  min-width: 1368px;
 }  
+
+  .background2{
+    bottom: 5%;
   }
-  @media only screen and (max-width: 1336px){
+  }
+  @media only screen and (max-width: 1598px){
     .wrapper{
       max-width: 1200px;
       width: 100%;
@@ -745,12 +748,18 @@ button.slick-arrow.slick-prev{
   bottom: 8%;
 }
 .background{
-  top: 32%;
+  top: 30%;
 }
-@media only screen and (max-width: 1025px){
+  }
+@media only screen and (max-width: 1334px){
   .wrapper{
     max-width: 850px;
   }
+  .arrows{
+    bottom: -100px;
+    left: 50%;
+    transform: translate(-50%)
+  }  
   .rightColumn{
     right:-185px
   }
@@ -825,6 +834,320 @@ button.slick-arrow.slick-prev{
   .contactReadMore :nth-child(1){
     padding-top: 26px;
   }
+  .contactImg img{
+    left: -79px;
+  }
+  div.slick-list{
+    margin-left: 100px;
+  }
+}
+@media only screen and (max-width: 944px){
+  .wrapper{
+    max-width: 700px;
+  }
+  .rightColumn{
+    left: 0;
+    bottom: -40px;
+    transform: rotate(0);
+    width: 100%;
+  }
+  .rightColumn span{
+    position: absolute;
+    bottom: 0;
+  }
+  .socialIcons{
+    flex-direction: row;
+    bottom: -50px;
+    right: 90px;
+  }
+  .socialIcons img{
+    padding: 10px;
+  }
+  .slick-slider{
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .surfBackground{
+    width: 211px;
+    height: 260px;
+  }
+  .surfImg{
+    bottom: 0;
+  }
+  .infoWrapper{
+    text-align: center;
+    right: 15px;
+    top: 40px;
+  }
+.priceWrapper{
+  padding-top: 135px;
+}
+ 
+  .buy{
+    color: #5da8ef;
+    font-weight: bold;
+    padding-left: 10px;
+  }
+  .img span{
+    transform: rotate(0);
+    left: 0;
+    width: 100%;
+    top: 297px;
+  }
+  .article2{
+    padding: 20px;
+  }
+  .heading h1{
+    font-size: 18pt;
+    top: 87px;
+  }
+  .articleimg span{
+    height: 0;
+    left: -26px;
+    transform: rotate(0);
+    margin-right: 0;
+    top: 98px;
+  }
+  .contactInfo{
+    justify-content: flex-start;
+  }
+  .contactImg img{
+    left: -62px;
+  }
+  div.slick-list{
+    margin-left: 26px;
+    padding-top: 40px;
+  }
+  .shopHeading{
+    padding-top: 90px;
+  }
+}
+@media only screen and (max-width: 764px){
+  .wrapper{
+    max-width: 574px;
+  }
+  .surfingSliderWrapper{
+    height: 300px;
+  }
+  .rightColumn{
+    bottom: -55px;
+  }
+  .socialIcons{
+    bottom: -66px;
+  }
+  .video{
+    padding-top: 0;
+  }
+  .video video{
+    width: 100%;
+  }
+  .sliderImage{
+    height: initial;
+  }
+  .surfingTextWrapper h1{
+    font-size: 20pt;
+  }
+  .surfingTextWrapper p{
+    font-size: 10pt;
+    font-weight: bold;
+  }
+  .shopHeading{
+    padding-top: 29px;
+  }
+  .surfTraining{
+    padding-top: 79px;
+    flex-direction: column;
+    text-align: center;
+  }
+  .article h1{
+    position: initial;
+  }
+  .rectangle{
+    margin: 20px auto;
+  }
+  .read-more{
+    padding-top: 0;
+    margin: 20px auto;
+  }
+  .imgArticleWrapper{
+    display: flex;
+    flex-direction: column;
+  }
+  .articleimg{
+    order: 2;
+  }
+  .article2{
+    order: 1;
+  }
+  .headingWrapper{
+    text-align: center;
+  }
+  .heading h1{
+    position: initial;
+  }
+  .articleimg img{
+    width: 100%;
+  }
+  .articleimg span{
+    top: initial;
+    left: 0;
+  }
+  .contact{
+    flex-direction: column;
+  }
+  .contactImg img{
+    left: 0;
+  }
+  .contactImg{
+    height: 398px;
+  }
+  .contactInfo{
+    text-align: center;
+  }
+  .subscribeWrapper{
+    width: initial;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .email{
+    width: 80%;
+
+  }
+  .imgTextSection img{
+    width: 100%;
+  }
+  div.slick-list{
+    margin-left: 26px ;
+    padding-top: initial;
+    padding-top: 50px;
+  }
+  .background2{
+    bottom: 16%;
+  }
+  .background{
+    top: 32%;
+  }
+}
+@media only screen and (max-width: 611px){
+  .wrapper{
+    width: 320px;
+    margin: 0 auto;
+  }
+  .header{
+    display: flex;
+    flex-direction: column;
+  }
+  .menu{
+    width: initial;
+    padding-top: 20px;
+    letter-spacing: initial;
+    font-size: 6pt;
+  }
+  .footer ul{
+    width:  initial;
+  }
+  .menu a{
+    padding: 10px;
+  }
+  .surfingTextWrapper h1{
+    font-size: 15pt;
+  }
+  .surfingTextWrapper p{
+   display: none;
+  }
+  .rightColumn{
+    bottom: 80px;
+  }
+  .socialIcons{
+    bottom: 17px;
+    left: 32%;
+  }
+  .arrows{
+    bottom: -20px;
+  }
+  .surfingVideo{
+    padding-top: 50px;
+  }
+  .surfingVideo p{
+    font-size: 15pt;
+  }
+  .surfTraining{
+    padding-top: 20px;
+  }
+  hr{
+    width: 70px;
+  }
+  .paragraphWrapper {
+    width: initial;
+  }
+  .video,video{
+    height: initial;
+  }
+ 
+  .shopHeading h1{
+   font-size: 32pt;
+  }
+
+ .img span {
+    top: 199px;
+ }
+ .pointBreakWrapper{
+   padding-top: 50px;
+ }
+ .joinClub h1{
+   font-size: 32pt;
+ }
+ .joinClub hr {
+  margin: 77px auto 102px auto;}
+.num{
+  color: gray;
+  opacity: 0.1;
+}
+.contactImg{
+  height: 232px;
+}
+.contact{
+  padding: 44px 0;
+}
+.background2{
+  bottom: 19%;
+}
+.background{
+  top: 32%;
+}
+.surfImg{
+  height:389px
+}
+.contactInfo{
+  margin-top: initial;
+}
+div.slick-list{
+  margin-left: 52px ;
+  padding-top: initial;
+}
+button.slick-arrow.slick-prev{
+  left: -18px;
 }
 
+}
+
+@media only screen and (max-width: 322px){
+
+.wrapper{
+  width: 288px;
+}
+.menu a{
+  padding:4px ;
+}
+.rightColumn span {
+  letter-spacing: 5px;
+}
+.socialIcons{
+  left: 29%;
+}
+div.slick-list{
+  margin-left: 37px;
+}
 }
