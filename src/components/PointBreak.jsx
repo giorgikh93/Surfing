@@ -1,13 +1,18 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import ReadMore from './ReadMore'
+import {Consumer} from '../useUrl'
+
 
 function PointBreak() {
+    const {IMAGE_PATH} = useContext(Consumer)
+
+
     return (
         <div className='pointBreakWrapper'>
             <div className='imgArticleWrapper'>
                 <div className="articleimg">
                     <span>SURF CAMPS</span>
-                    <img src="http://localhost:3000/images/article2img.png" alt="articleImg" />
+                    <img src={`${IMAGE_PATH}/images/article2img.png`} alt="articleImg" />
                 </div>
                 <div className="article2">
                     <div className='headingWrapper'>

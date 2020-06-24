@@ -1,18 +1,20 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Menu from './Menu'
+import { Consumer } from '../useUrl'
 
-function Footer(){
-    return(
+function Footer() {
+    const { IMAGE_PATH } = useContext(Consumer)
+    return (
         <div className='footer'>
-            <img src="http://localhost:3000/images/logo.png" alt=""/>
-            <Menu/>
+            <img onClick={() => window.scrollTo(0, 0)} src={`${IMAGE_PATH}/images/logo.png`} alt="" />
+            <Menu />
             <div className="socialIcons2">
-            <img src="http://localhost:3000/images/tumb.png" alt=""/>
-            <img src="http://localhost:3000/images/twit.png" alt=""/>
-            <img src="http://localhost:3000/images/vimeo.png" alt=""/>
-
+                <a href="https://www.tumblr.com/"><img src={`${IMAGE_PATH}/images/tumb.png `} alt="" /></a>
+                <a href="https://twitter.com/home"><img src={`${IMAGE_PATH}/images/twit.png `} alt="" /></a>
+                <a href="https://vimeo.com/"><img src={`${IMAGE_PATH}/images/vimeo.png`} alt="" /></a>
             </div>
         </div>
+
     )
 }
 

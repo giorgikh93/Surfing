@@ -1,12 +1,13 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState, useContext } from 'react'
 import ReadMore from './ReadMore'
+import {Consumer} from '../useUrl'
 
 function SurfingVideo() {
 
     const [play,setPlay] = useState(false)
+    const {IMAGE_PATH} = useContext(Consumer)
 
     const myVideo = useRef()
-
 
     function handlePlay(myVideo) {
         if (myVideo.current.paused) {
@@ -27,7 +28,7 @@ function SurfingVideo() {
             </div>
             <div className='videoSectionWrapper'>
                 <div className='imgTextSection'>
-                    <img src="http://localhost:3000/images/surf.png" alt="" />
+                    <img src={`${IMAGE_PATH}/images/surf.png`} alt="" />
                     <div className='paragraphWrapper'>
                     <p>By better understanding the various aspects of surfing. you will improve faster and have more fun in the water  </p>
                     <ReadMore text={'READ MORE'}/>   
@@ -35,7 +36,7 @@ function SurfingVideo() {
                 </div>
                 <div className='video'>
                     <video ref={myVideo} width='705px' height='546px' >
-                        <source src='http://localhost:3000/video/surfingVideo.mp4' />
+                        <source src={`${IMAGE_PATH}/video/surfingVideo.mp4`} />
                     </video>
                     <button onClick={() => handlePlay(myVideo)}>{play ? <i className="fa fa-pause" aria-hidden="true"></i> : <i className="fa fa-play" aria-hidden="true"></i>}</button>
                 </div>

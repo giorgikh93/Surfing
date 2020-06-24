@@ -1,39 +1,60 @@
-import React, { useState, useRef } from 'react'
-
-
+import React, { useState, useRef, useContext, useEffect } from 'react'
+import { Consumer } from '../useUrl'
 
 function SurfingSlider() {
 
-    const [state, setState] = useState(0)
+    const [position, setPosition] = useState(0)
+    const { IMAGE_PATH } = useContext(Consumer)
 
-    const [images, setImages] = useState([
-        'http://localhost:3000/images/xx.png',
-        'http://localhost:3000/images/sea.jpg',
-        'http://localhost:3000/images/eye.png'
-    ])
+    const images = [
+        `${IMAGE_PATH}/images/xx.png`,
+        `${IMAGE_PATH}/images/sea.jpg`,
+        `${IMAGE_PATH}/images/wave.jpg`
+    ]
 
     const nextRef = useRef()
     const prevRef = useRef()
 
+    useEffect(() => {
+        if (position === 0) {
+            nextRef.current.classList.add('active')
+            nextRef.current.classList.remove('opacity')
+            prevRef.current.classList.add('opacity')
+        }
+            
+      else  if (position === images.length - 1) {
+            nextRef.current.classList.remove('active')
+            nextRef.current.classList.add('opacity')
+            prevRef.current.classList.add('active')
+            prevRef.current.classList.remove('opacity')
+        }
+    }, [position, images.length])
+
 
     function next() {
-        prevRef.current.classList.remove('active')
-        nextRef.current.classList.add('active')
-        if (state < images.length - 1) {
-            setState(prevState => prevState + 1)
-        }
-        else {
+       
 
-            setState(images.length - 1)
+        if (position < images.length - 1) {
+            prevRef.current.classList.remove('active')
+            prevRef.current.classList.add('opacity')
+            nextRef.current.classList.add('active')
+            nextRef.current.classList.remove('opacity')
+            setPosition(prevState => prevState + 1)
+        }  
+     
+        else {
+            setPosition(images.length - 1)
         }
+    
     }
 
-
     function prev() {
-        nextRef.current.classList.remove('active')
-        prevRef.current.classList.add('active')
-        if (state >= 1) {
-            setState(prevState => prevState - 1)
+        if (position >= 1) {
+            nextRef.current.classList.remove('active')
+            nextRef.current.classList.add('opacity')
+            prevRef.current.classList.add('active')
+            prevRef.current.classList.remove('opacity')
+            setPosition(prevState => prevState - 1)
         }
         return
     }
@@ -49,22 +70,21 @@ function SurfingSlider() {
                     <p> body. a surfboard,and a wave.</p>
                 </div>
                 <div className='sliderImage'>
-                    <img src={images[state]} alt="img" />
+                    <img src={images[position]} alt="img" />
                 </div>
                 <div className='rightColumnWrapper'>
                     <div className='rightColumn'>
                         <span>FIRST SURFING MAGAZINE</span>
                     </div>
                     <div className='socialIcons'>
-                        <img src='http://localhost:3000/images/tumb.png' alt="img" />
-                        <img src='http://localhost:3000/images/twit.png' alt="img" />
-                        <img src='http://localhost:3000/images/vimeo.png' alt="img" />
-
+                        <a href="https://www.tumblr.com/"><i className="fa fa-tumblr" aria-hidden="true"></i> </a>
+                        <a href="https://twitter.com/home"><i className="fa fa-twitter" aria-hidden="true"></i> </a>
+                        <a href="https://vimeo.com/"><i className="fa fa-vimeo" aria-hidden="true"></i> </a>
                     </div>
                 </div>
                 <div className="arrows">
                     <i ref={prevRef} className="fa fa-angle-left" aria-hidden="true" onClick={prev}></i>
-                    <div><span className='current'>{state + 1}</span><span className='divider'>/</span>{images.length}</div>
+                    <div><span className='current'>{position + 1}</span><span className='divider'>/</span>{images.length}</div>
                     <i ref={nextRef} className="fa fa-angle-right" aria-hidden="true" onClick={next}></i>
                 </div>
             </div>

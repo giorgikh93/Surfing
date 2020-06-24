@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './App.css';
+import { Consumer } from './useUrl'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Header from './components/Header'
@@ -11,10 +12,12 @@ import PointBreak from './components/PointBreak'
 import JoinTheClub from './components/JoinTheClub'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
-
+import { Switch, Route } from 'react-router-dom'
 
 
 function App() {
+
+  const { IMAGE_PATH } = useContext(Consumer)
   return (
     <div className='relative'>
       <div className='wrapper' >
@@ -35,8 +38,23 @@ function App() {
         <Contact />
         <Footer />
       </div>
-      <img className='background' src="http://localhost:3000/images/background.png" alt="bckg" />
-      <img className='background2' src="http://localhost:3000/images/background2.png" alt="bckg2" />
+      <img className='background' src={`${IMAGE_PATH}/images/background.png`} alt="bckg" />
+      <img className='background2' src={`${IMAGE_PATH}/images/background2.png`} alt="bckg2" />
+      <Switch >
+        <Route path='/stories'>
+          'Component for Stories'
+      </Route>
+        <Route path='/events'>
+          'Component for Events'
+      </Route>
+        <Route path='/places'>
+          'Component for Places'
+      </Route>
+        <Route path='/boards'>
+          'Component for Boards'
+      </Route>
+
+      </Switch>
 
     </div>
 

@@ -1,10 +1,10 @@
 import React from 'react'
-
+import {Link} from 'react-router-dom'
 
 function ReadMore(props) {
     return (
         <div className='read-more' style={props.style}>
-            <a  href='/readMore'>{props.text} </a>
+            <Link  to='/readMore'>{props.text} </Link>
             <div className='underLine'></div>
         </div>
     )

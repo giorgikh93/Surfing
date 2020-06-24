@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import ReadMore from './ReadMore'
 import Slider from "react-slick";
+import {Consumer} from '../useUrl'
 
 function Shop() {
+
+    const {IMAGE_PATH} = useContext(Consumer)
 
     const settings = {
         dots: false,
@@ -32,7 +35,6 @@ function Shop() {
     return (
         <>
             <div className='shopHeading'>
-                {/* <img className='background' src="http://localhost:3000/images/background.png" alt="bckg" /> */}
                 <span>SHOP</span>
                 <h1>Surfboards</h1>
             </div>
@@ -41,7 +43,7 @@ function Shop() {
                 <Slider {...settings}>
                     <div className='itemsWrapper'>
                         <div className='surfBackground'>
-                            <img className='surfImg' src="http://localhost:3000/images/3.png" alt="surf" />
+                            <img className='surfImg' src={`${IMAGE_PATH}/images/3.png`} alt="surf" />
                             <div className="infoWrapper">
                                 <p>FUNBOARDS</p>
                                 <h1 >Chilli Rare Bird</h1>
@@ -54,7 +56,7 @@ function Shop() {
                     </div>
                     <div className='itemsWrapper'>
                         <div className='surfBackground'>
-                            <img className='surfImg' src="http://localhost:3000/images/2.png" alt="surf" />
+                            <img className='surfImg' src={`${IMAGE_PATH}/images/2.png`} alt="surf" />
                             <div className="infoWrapper">
                                 <p>SURFBOARDS</p>
                                 <h1>Emery NEM  XF</h1>
@@ -67,7 +69,7 @@ function Shop() {
                     </div>
                     <div className='itemsWrapper'>
                         <div className='surfBackground'>
-                            <img className='surfImg' src="http://localhost:3000/images/3.png" alt="surf" />
+                            <img className='surfImg' src={`${IMAGE_PATH}/images/3.png`} alt="surf" />
                             <div className="infoWrapper">
                                 <p>V</p>
                                 <h1>Agency GROM</h1>
@@ -80,7 +82,7 @@ function Shop() {
                     </div>
                     <div className='itemsWrapper'>
                         <div className='surfBackground'>
-                            <img className='surfImg' src="http://localhost:3000/images/2.png" alt="surf" />
+                            <img className='surfImg' src={`${IMAGE_PATH}/images/2.png`} alt="surf" />
                             <div className="infoWrapper">
                                 <p>FUNBOARDS</p>
                                 <h1 >Chilli Rare Bird</h1>
@@ -93,7 +95,7 @@ function Shop() {
                     </div>
                     <div className='itemsWrapper'>
                         <div className='surfBackground'>
-                            <img className='surfImg' src="http://localhost:3000/images/3.png" alt="surf" />
+                            <img className='surfImg' src={`${IMAGE_PATH}/images/3.png`} alt="surf" />
                             <div className="infoWrapper">
                                 <p>FUNBOARDS</p>
                                 <h1>Chilli Rare Bird</h1>
@@ -106,7 +108,7 @@ function Shop() {
                     </div>
                     <div className='itemsWrapper'>
                         <div className='surfBackground'>
-                            <img className='surfImg' src="http://localhost:3000/images/2.png" alt="surf" />
+                            <img className='surfImg' src={`${IMAGE_PATH}/images/2.png`} alt="surf" />
                             <div className="infoWrapper">
                                 <p>FUNBOARDS</p>
                                 <h1>Chilli Rare Bird</h1>

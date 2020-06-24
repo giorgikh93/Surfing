@@ -1,11 +1,16 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import ReadMore from './ReadMore'
+import {Consumer} from '../useUrl'
+
 
 function Contact() {
+
+    const {IMAGE_PATH} = useContext(Consumer)
+
     return (
         <div className='contact'>
             <div className="contactImg">
-            <img src="http://localhost:3000/images/contactimg.png" alt="cimg" />
+            <img src={`${IMAGE_PATH}/images/contactimg.png`} alt="cimg" />
             </div>
             <div className='contactInfo'>
                 <span className='ourCamp'>OUR CAMP</span>
