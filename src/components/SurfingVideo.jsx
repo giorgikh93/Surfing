@@ -1,11 +1,11 @@
 import React, { useRef, useState, useContext } from 'react'
 import ReadMore from './ReadMore'
-import {Consumer} from '../useUrl'
+import { Consumer } from '../useUrl'
 
 function SurfingVideo() {
 
-    const [play,setPlay] = useState(false)
-    const {IMAGE_PATH} = useContext(Consumer)
+    const [play, setPlay] = useState(false)
+    const { IMAGE_PATH } = useContext(Consumer)
 
     const myVideo = useRef()
 
@@ -18,7 +18,6 @@ function SurfingVideo() {
             setPlay(false)
         }
     }
-
     return (
         <div >
             <div className='surfingVideo '>
@@ -30,8 +29,8 @@ function SurfingVideo() {
                 <div className='imgTextSection'>
                     <img src={`${IMAGE_PATH}/images/surf.png`} alt="" />
                     <div className='paragraphWrapper'>
-                    <p>By better understanding the various aspects of surfing. you will improve faster and have more fun in the water  </p>
-                    <ReadMore text={'READ MORE'}/>   
+                        <p>By better understanding the various aspects of surfing. you will improve faster and have more fun in the water  </p>
+                        <ReadMore text={'READ MORE'} />
                     </div>
                 </div>
                 <div className='video'>

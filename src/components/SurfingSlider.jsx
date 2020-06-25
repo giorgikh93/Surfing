@@ -14,63 +14,73 @@ function SurfingSlider() {
 
     const nextRef = useRef()
     const prevRef = useRef()
+    const imgRef = useRef()
 
     useEffect(() => {
-        if (position === 0) {
-            nextRef.current.classList.add('active')
-            nextRef.current.classList.remove('opacity')
-            prevRef.current.classList.add('opacity')
-        }
-            
-      else  if (position === images.length - 1) {
-            nextRef.current.classList.remove('active')
-            nextRef.current.classList.add('opacity')
-            prevRef.current.classList.add('active')
-            prevRef.current.classList.remove('opacity')
-        }
-    }, [position, images.length])
+        nextRef.current.classList.add('active')
+        prevRef.current.classList.add('opacity')
+        imgRef.current.classList.add('fadeIn')
+    }, [])
 
 
     function next() {
-       
-
         if (position < images.length - 1) {
-            prevRef.current.classList.remove('active')
-            prevRef.current.classList.add('opacity')
-            nextRef.current.classList.add('active')
-            nextRef.current.classList.remove('opacity')
-            setPosition(prevState => prevState + 1)
-        }  
-     
-        else {
-            setPosition(images.length - 1)
+            imgRef.current.classList.remove('fadeIn')
         }
-    
-    }
+        setTimeout(fade, 50)
+        function fade() {
+            if (position < images.length - 1) {
+                prevRef.current.classList.remove('active')
+                prevRef.current.classList.add('opacity')
+                nextRef.current.classList.add('active')
+                nextRef.current.classList.remove('opacity')
+                setPosition(prevState => prevState + 1)
+                imgRef.current.classList.add('fadeIn')
 
+            }
+            else if (position === images.length - 1) {
+                nextRef.current.classList.remove('active')
+                nextRef.current.classList.add('opacity')
+                prevRef.current.classList.add('active')
+                prevRef.current.classList.remove('opacity')
+            }
+        }
+
+    }
     function prev() {
         if (position >= 1) {
-            nextRef.current.classList.remove('active')
-            nextRef.current.classList.add('opacity')
-            prevRef.current.classList.add('active')
-            prevRef.current.classList.remove('opacity')
-            setPosition(prevState => prevState - 1)
+            imgRef.current.classList.remove('fadeIn')
+        }
+        setTimeout(fade, 50)
+        function fade() {
+            if (position >= 1) {
+                nextRef.current.classList.remove('active')
+                nextRef.current.classList.add('opacity')
+                prevRef.current.classList.add('active')
+                prevRef.current.classList.remove('opacity')
+                setPosition(prevState => prevState - 1)
+                imgRef.current.classList.add('fadeIn')
+
+            } else if (position === 0) {
+                nextRef.current.classList.add('active')
+                nextRef.current.classList.remove('opacity')
+                prevRef.current.classList.add('opacity')
+            }
         }
         return
     }
-
     return (
         <>
             <div className='surfingSliderWrapper ' >
                 <div className='surfingTextWrapper'>
-                    <span>Y O U R</span>
+                    <span>YOUR</span>
                     <h1>Beautiful Escape</h1>
                     <p>One of the greatest things about the sport of surfing is</p>
-                    <p> that you need only three things yout</p>
-                    <p> body. a surfboard,and a wave.</p>
+                    <p> that you need only three things: your body,</p>
+                    <p>a surfboard, and a wave.</p>
                 </div>
                 <div className='sliderImage'>
-                    <img src={images[position]} alt="img" />
+                    <img src={images[position]} alt="img" className='initial' ref={imgRef} />
                 </div>
                 <div className='rightColumnWrapper'>
                     <div className='rightColumn'>

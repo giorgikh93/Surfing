@@ -42,17 +42,17 @@ function App() {
       <img className='background2' src={`${IMAGE_PATH}/images/background2.png`} alt="bckg2" />
       <Switch >
         <Route path='/stories'>
-          'Component for Stories'
-      </Route>
+          {/* 'Component for Stories' */}
+        </Route>
         <Route path='/events'>
-          'Component for Events'
-      </Route>
+          {/* 'Component for Events' */}
+        </Route>
         <Route path='/places'>
-          'Component for Places'
-      </Route>
+          {/* 'Component for Places' */}
+        </Route>
         <Route path='/boards'>
-          'Component for Boards'
-      </Route>
+          {/* 'Component for Boards' */}
+        </Route>
 
       </Switch>
 

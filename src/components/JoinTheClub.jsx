@@ -1,18 +1,16 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 
-
-
 function JoinTheClub() {
 
     const [email, setEmail] = useState('')
-
 
     function handleSubscription(e) {
         e.preventDefault();
         axios.post('server-url', { email })
             .then(setEmail(''))
     }
+
     return (
         <div className='joinClub'>
             <hr />
