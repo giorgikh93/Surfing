@@ -688,10 +688,10 @@ button.slick-arrow.slick-prev{
       width: 100%;
     }
     .rightColumn{
-      right:-195px
+      right:-189px;
     }
     .socialIcons{
-      right: -46px;
+      right: -40px;
     }
     button.slick-arrow.slick-prev {
       left: -30px;
