@@ -1127,6 +1127,9 @@ div.slick-list{
   margin-left: 52px ;
   padding-top: initial;
 }
+button.slick-arrow.slick-next{
+  right: -19px;
+}
 button.slick-arrow.slick-prev{
   left: -18px;
 }
